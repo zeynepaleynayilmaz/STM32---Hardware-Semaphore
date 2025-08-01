@@ -1,0 +1,6 @@
+connections/org.eclipse.remote.serial.core.connectionType/HSEM_TERMINAL/serial.baudRate=11
+connections/org.eclipse.remote.serial.core.connectionType/HSEM_TERMINAL/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/HSEM_TERMINAL/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/HSEM_TERMINAL/serial.portName=COM5
+connections/org.eclipse.remote.serial.core.connectionType/HSEM_TERMINAL/serial.stopBits=0
+eclipse.preferences.version=1

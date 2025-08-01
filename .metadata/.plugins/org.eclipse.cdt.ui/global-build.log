@@ -1,0 +1,188 @@
+01:11:00 **** Incremental Build of configuration Debug for project hsem_dualcore_CM4 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WL55xx -c -I../Core/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc -I../../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:127:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  127 |                   HAL_UART_Transmit(&huart2, "CM4\r\n", 6, 200);
+      |                                              ^~~~~~~~~
+      |                                              |
+      |                                              char *
+In file included from ../Core/Inc/stm32wlxx_hal_conf.h:305,
+                 from ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h:1639:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1639 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "hsem_dualcore_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ALEYNA\STM32CubeIDE\hsem_organizasyon\hsem_dualcore\CM4\STM32WL55JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="hsem_dualcore_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: hsem_dualcore_CM4.elf
+ 
+arm-none-eabi-size  hsem_dualcore_CM4.elf 
+arm-none-eabi-objdump -h -S hsem_dualcore_CM4.elf  > "hsem_dualcore_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  13340	     12	   1724	  15076	   3ae4	hsem_dualcore_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: hsem_dualcore_CM4.list
+ 
+01:11:10 **** Incremental Build of configuration Debug for project hsem_dualcore_CM0PLUS ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3768	     12	   1724	   5504	   1580	hsem_dualcore_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+01:11:10 **** Incremental Build of configuration Debug for project hsem_dualcore_CM4 ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13340	     12	   1724	  15076	   3ae4	hsem_dualcore_CM4.elf
+Finished building: default.size.stdout
+ 
+01:12:03 **** Incremental Build of configuration Debug for project hsem_dualcore_CM0PLUS ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3768	     12	   1724	   5504	   1580	hsem_dualcore_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+01:12:03 **** Incremental Build of configuration Debug for project hsem_dualcore_CM4 ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13340	     12	   1724	  15076	   3ae4	hsem_dualcore_CM4.elf
+Finished building: default.size.stdout
+ 
+01:12:35 **** Incremental Build of configuration Debug for project hsem_dualcore_CM0PLUS ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3768	     12	   1724	   5504	   1580	hsem_dualcore_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+01:22:32 **** Incremental Build of configuration Debug for project hsem_dualcore_CM0PLUS ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3768	     12	   1724	   5504	   1580	hsem_dualcore_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+01:22:33 **** Incremental Build of configuration Debug for project hsem_dualcore_CM4 ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13340	     12	   1724	  15076	   3ae4	hsem_dualcore_CM4.elf
+Finished building: default.size.stdout
+ 
+01:22:59 **** Incremental Build of configuration Debug for project hsem_dualcore_CM0PLUS ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3768	     12	   1724	   5504	   1580	hsem_dualcore_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+12:12:07 **** Incremental Build of configuration Debug for project hsem_dualcore_CM0PLUS ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3768	     12	   1724	   5504	   1580	hsem_dualcore_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+12:12:07 **** Incremental Build of configuration Debug for project hsem_dualcore_CM4 ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13340	     12	   1724	  15076	   3ae4	hsem_dualcore_CM4.elf
+Finished building: default.size.stdout
+ 
+12:12:37 **** Incremental Build of configuration Debug for project hsem_dualcore_CM0PLUS ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3768	     12	   1724	   5504	   1580	hsem_dualcore_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+12:33:01 **** Incremental Build of configuration Debug for project hsem_dualcore_CM0PLUS ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3768	     12	   1724	   5504	   1580	hsem_dualcore_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+12:33:01 **** Incremental Build of configuration Debug for project hsem_dualcore_CM4 ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13340	     12	   1724	  15076	   3ae4	hsem_dualcore_CM4.elf
+Finished building: default.size.stdout
+ 
+12:33:32 **** Incremental Build of configuration Debug for project hsem_dualcore_CM0PLUS ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3768	     12	   1724	   5504	   1580	hsem_dualcore_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+14:00:13 **** Build of configuration Debug for project hsem_dualcore_CM0PLUS ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3768	     12	   1724	   5504	   1580	hsem_dualcore_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+14:00:14 **** Build of configuration Debug for project hsem_dualcore_CM4 ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13340	     12	   1724	  15076	   3ae4	hsem_dualcore_CM4.elf
+Finished building: default.size.stdout
+ 
+14:00:30 **** Incremental Build of configuration Debug for project hsem_dualcore_CM0PLUS ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3768	     12	   1724	   5504	   1580	hsem_dualcore_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+14:00:30 **** Incremental Build of configuration Debug for project hsem_dualcore_CM4 ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13340	     12	   1724	  15076	   3ae4	hsem_dualcore_CM4.elf
+Finished building: default.size.stdout
+ 
+14:01:40 **** Incremental Build of configuration Debug for project hsem_dualcore_CM0PLUS ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3768	     12	   1724	   5504	   1580	hsem_dualcore_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+14:01:41 **** Incremental Build of configuration Debug for project hsem_dualcore_CM4 ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13340	     12	   1724	  15076	   3ae4	hsem_dualcore_CM4.elf
+Finished building: default.size.stdout
+ 
+14:02:21 **** Incremental Build of configuration Debug for project hsem_dualcore_CM0PLUS ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3768	     12	   1724	   5504	   1580	hsem_dualcore_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
+14:02:22 **** Incremental Build of configuration Debug for project hsem_dualcore_CM4 ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13340	     12	   1724	  15076	   3ae4	hsem_dualcore_CM4.elf
+Finished building: default.size.stdout
+ 
+14:02:59 **** Incremental Build of configuration Debug for project hsem_dualcore_CM0PLUS ****
+make -j16 all 
+arm-none-eabi-size  hsem_dualcore_CM0PLUS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3768	     12	   1724	   5504	   1580	hsem_dualcore_CM0PLUS.elf
+Finished building: default.size.stdout
+ 
